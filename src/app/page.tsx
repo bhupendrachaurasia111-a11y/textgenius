@@ -12,7 +12,7 @@ function generateSessionId() {
 type Project = { id: string; name: string; files: any };
 
 export default function Home() {
-  const [messages, setMessages] = useState([{ role: "user" | "agent"; content: string }]);
+  const [messages, setMessages] = useState<any[]>([]);
   const [files, setFiles] = useState<any>(null);
   const [site, setSite] = useState({ html: '', css: '', js: '' });
   const [sessionId, setSessionId] = useState(generateSessionId());
